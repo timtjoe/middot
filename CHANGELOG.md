@@ -1,4 +1,6 @@
 # middot Changelog
+## [1.2.0](https://github.com/timtjoe/middot/compare/v1.1.0...v1.2.0) (2026-02-14)
+
 ## [1.1.0](https://github.com/timtjoe/middot/compare/v1.0.0...v1.1.0) (2026-02-14)
 
 
