@@ -9,7 +9,6 @@
 
 ---
 
-```text
 ## 0x01 ABSTRACT
 
 middot is a zero-dependency, high-throughput utility designed for the 
