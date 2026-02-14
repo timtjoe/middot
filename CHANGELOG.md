@@ -1,4 +1,16 @@
 # middot Changelog
+## [1.3.0](https://github.com/timtjoe/middot/compare/v1.2.0...v1.3.0) (2026-02-14)
+
+
+### 🐛 Bug Fixes
+
+* readme code display problem ([c7f3103](https://github.com/timtjoe/middot/commit/c7f31036301477d4e202805a52b025b528bbb0e1))
+
+
+### ✨ Features
+
+* add bun types ([c5d143c](https://github.com/timtjoe/middot/commit/c5d143c602406bc09b8c10cb07e4e65ac59cbeeb))
+
 ## [1.2.0](https://github.com/timtjoe/middot/compare/v1.1.0...v1.2.0) (2026-02-14)
 
 ## [1.1.0](https://github.com/timtjoe/middot/compare/v1.0.0...v1.1.0) (2026-02-14)
