@@ -1,121 +1,98 @@
+# 🅼🅸🅳🅳🅾🆃: 🅰 🆃🆁🅴🅰🆃🅸🆂🅴 🅾🅽 🆄🅽🅸🅲🅾🅳🅴 🆂🅴🅿🅰🆁🅰🆃🅸🅾🅽
+
 > [!IMPORTANT]
-> Because developers love using packages for literally everything—even things that already exist on their keyboards—behold: the ultimate, enterprise-grade solution for the middle dot character.
+> In an era where human cognitive load is depleted by the arduous task of 
+> locating the · (U+00B7) or • (U+2022) keys, this library provides an 
+> abstracted, enterprise-grade interface for character retrieval. It is a 
+> monument to the philosophy that if a thing is worth doing, it is worth 
+> wrapping in a Type Guard and publishing to a registry.
 
-**The most sophisticated HTML middot character utility for TypeScript.** middot(): the most type-safe, benchmarked, and CI/CD-optimized way to get a single dot character.
-
-![npm](https://img.shields.io/npm/v/middot?style=for-the-badge) ![build](https://img.shields.io/github/actions/workflow/status/timtjoe/middot/test.yml) ![types](https://img.shields.io/npm/types/middot) ![size](https://img.shields.io/bundlephobia/minzip/middot)
-
-## 🚀 Quick Start
-
-```bash
-npm i middot
-
-```
-
-```ts
-import { middot, isMiddot } from 'middot';
-
-const dot = middot(); // · (U+00B7)
-if (isMiddot(dot)) console.log('Official middot!'); // ✅ true
-
-```
-
-## Usage Anywhere (React / Vue / Svelte)
-
-### React
-
-```tsx
-import { middot } from "middot";
-
-export const Divider = () => <span>{middot()}</span>;
-
-```
-
-### Vue
-
-```vue
-<script setup lang="ts">
-import { middot } from "middot";
-const dot = middot();
-</script>
-
-<template>
-  <span>{{ dot }}</span>
-</template>
-
-```
-
-### Svelte
-
-```svelte
-<script lang="ts">
-  import { middot } from "middot";
-  const dot = middot();
-</script>
-
-<span>{dot}</span>
-
-```
-
-```ts
-// Type-safe everywhere
-const maybeDot: unknown = userInput;
-if (isMiddot(maybeDot)) {
-  bullets.push(maybeDot); // ✅ Narrowed to Middot type
-}
-
-```
-
-## 📊 Benchmarks
-
-```bash
-$ bun run benchmark
-✓ benchmark: 100k iterations [9.8ms]
-
-```
-
-## 🛠️ Development
-
-```bash
-git clone [https://github.com/timtjoe/middot](https://github.com/timtjoe/middot)
-cd middot
-bun install
-bun test          # Unit tests
-bun run benchmark  # Performance validation
-bun run build      # Build dist/index.js + types
-
-```
-
-## 🤖 Auto-Publish
-
-Commit messages trigger semantic releases via GitHub Actions:
+---
 
 ```text
-feat: add new feature        # v1.0.0 → v1.1.0
-fix: patch bug              # v1.1.0 → v1.1.1  
-feat!: breaking change      # v1.1.1 → v2.0.0
+## 0x01 ABSTRACT
 
-```
-
----
-
-### About the Developer
-
-I am a Full-Stack Developer dedicated to crafting modern UIs that feel fast, clean, and intuitive. With **5+ years of experience**, I thrive on the joy that a well-built interface brings to users.
-
-Interestingly, my journey into code started with a fascination for Operating Systems. While I love the frontend, I still enjoy delving into low-level programming and OS concepts. I'm always looking for opportunities that allow me to be creative, solve complex problems, and contribute to products that reach a global audience.
-
-## Let's Connect
-
-If you're looking for a developer to help shape your user experience and make your product stand out in a crowded market, I'd love to hear from you.
-
-* **Email:** [timtjoe@gmail.com](mailto:timtjoe@gmail.com)
-* **WhatsApp:** [wa.me/+231770934646](https://wa.me/+231770934646)
-* **Facebook:** [fb.com/timtjoe](https://fb.com/timtjoe)
+middot is a zero-dependency, high-throughput utility designed for the 
+rigorous demands of modern typographic separation. While the uninitiated 
+may perceive these characters as mere pixels, the discerning engineer 
+recognizes them as C where C ∈ { U+00B7, U+2022 }. This library ensures 
+that C is accessed via a stable, referentially transparent API, optimized 
+for the JavaScriptCore (JSC) JIT compiler.
 
 ---
 
-<div align="center">
-<img src="https://img.shields.io/badge/built%20with-bun-orange?logo=bun.sh" alt="built with bun" />
-<img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white" alt="typescript" />
-</div>
+## 0x02 TESTIMONIALS OF VERIFICATION
+
+I eschew "Usage" documentation in favor of EMPIRICAL EVIDENCE. The 
+following test cases represent the core invariant logic of the library.
+
+### IDENTITY AND CODEPOINT ASSERTION
+I verify that the returned string literal maps precisely to the IEEE-754 
+adjacent memory space allocated for Unicode scalars.
+
+  test('identity', () => {
+    expect(middot()).toBe('\u00B7');           // Interpunct
+    expect(middot('bullet')).toBe('\u2022');   // List Bullet
+    expect(middot().charCodeAt(0)).toBe(183);  // 0x00B7
+  });
+
+### TYPE-LEVEL SOPHISTICATION
+The library utilizes TypeScript's narrowing capabilities to provide 
+compile-time safety for character validation.
+
+  test('narrowing', () => {
+    const char: unknown = '•';
+    if (isMiddot(char)) {
+      // Within this scope, char is strictly type Middot
+      const verified: Middot = char; 
+      expect(verified).toBeDefined();
+    }
+  });
+
+---
+
+## 0x03 PERFORMANCE AND OPERATIONAL THROUGHPUT
+
+Benchmark results obtained via 'bun bench' on a Unix-like environment. 
+
+| OPERATION       | THROUGHPUT    | LATENCY (P99) |
+|-----------------|---------------|---------------|
+| middot()        | ~142.5M ops/s | 0.007 ns      |
+| isMiddot(dot)   | ~98.2M ops/s  | 0.012 ns      |
+| isMiddot(fail)  | ~105.1M ops/s | 0.010 ns      |
+
+---
+
+## 0x04 DEPLOYMENT AND SEMANTIC GOVERNANCE
+
+The lifecycle of this library is governed by a GitHub Actions CI/CD 
+pipeline, enforcing CRYPTOGRAPHIC PROVENANCE. 
+
+  # The path to enlightenment
+  $ bun run typecheck   # Static Analysis
+  $ bun test            # Logic Verification
+  $ bun run build       # Transpilation to ESM/CJS
+
+---
+
+## 0x05 POSTSCRIPT: THE EXISTENTIAL JOKE
+
+Since developers notoriously love over-engineering the most trivial 
+abstractions—turning simple key-presses into 400-kb dependencies—I 
+created this library as a satirical tribute to that obsession. 
+
+If you appreciate the absurdity of enterprise-grade interpuncts, 
+please share the joke with your fellow engineers.
+
+01001010 01001111 01001011 01000101 00100000 01000100 01000101 
+01010000 01001100 01001111 01011001 01000101 01000100
+
+---
+
+## 0x06 ABOUT THE ARCHITECT
+
+- EMAIL:   timtjoe@gmail.com
+- DIGITAL: wa.me/+231770934646
+
+                          built with bun.sh
+          01101101 01101001 01100100 01100100 01101111 01110100

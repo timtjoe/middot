@@ -1,19 +1,19 @@
-/**
- * Re-export index for `middot` package. Clean barrel exports with stable MIDDOT constant.
- * @module
- * @see {@link https://www.npmjs.com/package/middot | middot npm}
- */
+import { 
+  middot, 
+  isMiddot, 
+  MIDDOT_CHAR, 
+  BULLET_CHAR, 
+  type Middot, 
+  type MiddotOption 
+} from './lib.js';
 
-// Import all symbols into local scope
-import { middot, isMiddot, MIDDOT_CHAR, type Middot } from './lib.js';
+export { 
+  middot, 
+  isMiddot, 
+  MIDDOT_CHAR, 
+  BULLET_CHAR, 
+  type Middot, 
+  type MiddotOption 
+};
 
-// Re-export everything for clean imports
-export { middot, isMiddot, MIDDOT_CHAR, type Middot };
-
-// Stable readonly constant - same instance as MIDDOT_CHAR
-/**
- * Stable readonly reference to canonical middot · (U+00B7)
- * @type {Middot}
- * @constant
- */
 export const MIDDOT = middot();

@@ -2,21 +2,24 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "declaration": true,
-    "outDir": "dist",
+    "outDir": "./dist",
     "rootDir": ".",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "emitDeclarationOnly": false
+    "isolatedModules": true
   },
   "include": [
     "index.ts",
-    "lib.ts", 
+    "lib.ts",
     "benchmark.ts",
-    "test/**/*.ts"
+    "**/*.test.ts" 
   ],
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
