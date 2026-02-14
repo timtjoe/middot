@@ -1,6 +1,6 @@
 {
   "name": "middot",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Sophisticated TypeScript middot · (U+00B7) with type guard for React/Vue/Svelte/TS",
   "keywords": [
     "middot",
