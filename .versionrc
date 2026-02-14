@@ -1,0 +1,23 @@
+{
+  "header": "# middot Changelog\n\nThe most sophisticated HTML middot · utility for TypeScript.",
+  "types": [
+    { "type": "feat", "section": "✨ Features", "bump": "minor" },
+    { "type": "fix", "section": "🐛 Bug Fixes", "bump": "patch" },
+    { "type": "perf", "section": "⚡ Performance", "bump": "patch" },
+    { "type": "docs", "section": "📚 Documentation", "bump": "patch" },
+    { "type": "refactor", "section": "♻️ Refactor", "bump": "patch" },
+    { "type": "build", "section": "🧰 Build", "bump": "patch" },
+    { "type": "ci", "section": "🔧 CI", "hidden": true },
+    { "type": "chore", "hidden": true }
+  ],
+  "commitUrlFormat": "https://github.com/timtjoe/middot/commit/{{hash}}",
+  "compareUrlFormat": "https://github.com/timtjoe/middot/compare/{{previousTag}}...{{currentTag}}",
+  "releaseCommitMessageFormat": "chore(release): {{currentTag}} [skip ci]",
+  "bumpFiles": [
+    { "filename": "package.json", "type": "json" }
+  ],
+  "packageFiles": [{ "filename": "package.json", "type": "json" }],
+  "scripts": {
+    "posttag": "git push --follow-tags origin master"
+  }
+}
