@@ -1,6 +1,11 @@
 # middot Changelog
+## [1.1.0](https://github.com/timtjoe/middot/compare/v1.0.0...v1.1.0) (2026-02-14)
 
-The most sophisticated HTML middot · utility for TypeScript.
+
+### ✨ Features
+
+* update entire project ([6be0cac](https://github.com/timtjoe/middot/commit/6be0cac29761460ec80a994b7edb756c84ed410d))
+
 ## [1.0.0](https://github.com/timtjoe/middot/compare/v0.1.0...v1.0.0) (2026-02-14)
 
 ## 0.1.0 (2026-02-14)
