@@ -1,0 +1,48 @@
+{
+  "name": "middot",
+  "version": "0.0.0",
+  "description": "Sophisticated TypeScript middot · (U+00B7) with type guard for React/Vue/Svelte/TS",
+  "keywords": [
+    "middot",
+    "bullet",
+    "dot",
+    "unicode",
+    "typescript",
+    "react",
+    "vue",
+    "svelte"
+  ],
+  "author": "timtjoe",
+  "license": "MIT",
+  "repository": "https://github.com/timtjoe/middot",
+  "homepage": "https://github.com/timtjoe/middot#readme",
+  "bugs": "https://github.com/timtjoe/middot/issues",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc && bun build index.ts --outdir=dist --format=esm",
+    "build:types": "tsc --emitDeclarationOnly",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "benchmark": "bun run benchmark.ts",
+    "prepublishOnly": "bun run typecheck && bun run test && bun run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2",
+    "@types/node": "^22.7.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
